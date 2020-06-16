@@ -19,9 +19,7 @@ Informations like Temperature, Pressure, Humidity, Weather status, Time of Sunri
 
 <br><h2>Getting weather information using Latitude & Longitude</h2>
 <p>Suppose you want to request weather information using a <strong>Latitude</strong> &amp; <strong>Longitude</strong> of a place, then you should use:</p>
-<pre>response = URL("https://api.openweathermap.org/data/2.5/weather?lat=$LAT&amp;lon=$LON&amp;units=metric&amp;appid=$API").readText(
-                    Charsets.UTF_8
-                )</pre>
+<pre>String response = HttpRequest.excuteGet("https://api.openweathermap.org/data/2.5/weather?lat=" + LAT + "&lon=" + LON + "&units=metric&appid=" + API);</pre>
 <p>where LAT and LON will be the Latitude &amp; Longitude respectively. If you want to implement this project to display weather
 information of user's current location you'll just need detect the current latitude &amp; longitude. I've already posted an article on 
 <a href="https://blog.frsarker.com/java/detect-current-latitude-and-longitude-using-java-in-android.html" target="_blank">
